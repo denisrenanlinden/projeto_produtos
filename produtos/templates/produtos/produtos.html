@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJango - Index</title>
+    <title>DJango - Produtos</title>
 </head>
 <body>
-    <h1>Index</h1>
+    <h1>Produtos</h1>
     
     <h2> {{ frase }}</h2>
     <h3> {{ nome }}</h3>
@@ -14,9 +14,9 @@
 
     {% for produto in produtos %}
 
-    <p> {{ produto.nome }} </p>
-    <p> {{ produto.preco }} </p>
-    <p> {{ produto.estoque }} </p>
+    <p> Nome: {{ produto.nome }} -
+     Preço: {{ produto.preco }} -
+     Descrição: {{ produto.descricao }} </p>
 
     {% endfor %}
 
@@ -24,13 +24,13 @@
         <tr>
             <th>Nome</th>
             <th>Preço</th>
-            <th>Estoque</th>
+            <th>Descrição</th>
         </tr>
         {% for produto in produtos %}
         <tr>
             <td>{{ produto.nome }}</td>
             <td>{{ produto.preco }}</td>
-            <td>{{ produto.estoque }}</td>
+            <td>{{ produto.descricao }}</td>
         </tr>
         {% endfor %}
     </table>

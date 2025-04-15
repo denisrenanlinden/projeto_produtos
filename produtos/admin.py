@@ -6,6 +6,6 @@ from .models import Produto
 
 @admin.register(Produto)
 class AdminProduto(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'preco', 'descricao')
+    list_display = ('nome', 'preco', 'descricao')
     search_fields = ('nome',)
     list_per_page = 10
